@@ -1,0 +1,38 @@
+<h1>Componentes</h1>
+
+<p>¿Tienes hambre?</p>
+<input type="checkbox" name="check1" checked>
+<br/>
+
+
+<p>¿Tienes hambre?</p>
+<input type="checkbox" name="check2" [checked]="tenerHambre" [disabled]="deshabilitarCheck">
+<br/>
+
+
+<p>¿Tienes hambre?</p>
+<input type="checkbox" name="check3" (click)="heHechoClick()">
+<br/>
+
+
+<p>¿Tienes hambre?</p>
+<input type="checkbox" name="check4" (click)="verSiTengoHambre($event)">
+{{textoHambre}}
+<br/>
+
+¿Crees que va ha aprobar DWEC?
+<br/>
+
+SI <input input type="radio" name="radio" value="si" (click)="verSiApruebo($event)"/>
+NO <input input type="radio" name="radio" value="no" (click)="verSiApruebo($event)"/>
+{{textoAprobar}}
+<br/>
+¿Que vas a hacer este finde? <input type="text" (input)="planearEsteFinde($event)"/>
+<br>
+Este finde voy a {{esteFinde}}
+
+<br>
+escriba tu nombre: <input type="text" value="" placeholder="pon tu nombre" [(ngModel)]="nombre" />
+
+<br/>
+{{nombre}}
